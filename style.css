@@ -1,139 +1,106 @@
-/* Global Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    font-family: 'Comic Story', sans-serif;
-    color: #FFF;
-    background: url('images/background.png') no-repeat center center fixed;
-    background-attachment: fixed;
-    background-size: cover;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moolah Mouse | $CHEEZ</title>
+    <meta name="title" content="Moolah Mouse | $CHEEZ">
+    <meta name="description" content="Catch the Moolah, Stack the Cheez!">
 
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-/* Header Section */
-header {
-    text-align: center;
-    padding: 20px 0;
-}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Moolah Mouse | $CHEEZ">
+    <meta property="og:description" content="Catch the Moolah, Stack the Cheez!">
+    <meta property="og:image" content="images/seoimage.png">
 
-.logo {
-    width: 180px;
-}
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Moolah Mouse | $CHEEZ">
+    <meta property="twitter:description" content="Catch the Moolah, Stack the Cheez!">
+    <meta property="twitter:image" content="images/seoimage.png">
 
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 50px 20px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Full Page Wrapper -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <img src="images/logo.png" alt="Crypto Logo" class="logo">
+        </header>
 
-.hero-content {
-    max-width: 100%;
-}
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <img src="images/hero-illustration.png" alt="Hero Illustration" class="hero-illustration">
+                <h1 class="white-text">Catch the Moolah,</h1>
+                <p class="yellow-text">Stack the Cheese!</p>
 
-.hero-illustration {
-    width: 60vw;
-    max-width: 250px;
-    margin-bottom: 20px;
-}
+                <!-- Social Icons Section -->
+                <div class="social-icons">
+                    <a href="https://telegram.org" target="_blank"><img src="images/telegram-icon.png" alt="Telegram" class="social-icon"></a>
+                    <a href="https://x.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+                    <a href="https://dextools.io" target="_blank"><img src="images/discord-icon.png" alt="Discord" class="social-icon"></a>
+                </div>
 
-/* Story Section */
-#story-section {
-    text-align: center;
-    padding: 50px 20px;
-}
+                <!-- Buy Button -->
+                <a href="https://raydium.io/swap/" target="_blank" class="cta-button">
+                    <img src="images/solanaicon.png" alt="Solana Icon" class="button-icon"> Buy $CHEEZ
+                </a>
+            </div>
+        </section>
 
-.story-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
+        <!-- Story Section -->
+        <section id="story-section">
+            <div class="story-content">
+                <h2 class="story-title">The Story of Moolah Mouse</h2>
+                <p class="story-text">
+                    In a chaotic world of meme tokens, there’s one character that stands out from the crowd, a mouse with a nose for money and a taste for cheddar. Meet Moolah Mouse, the wittiest and cheekiest chaser of "moolah" in the meme-verse. This mischievous mouse is always on the hunt for his next big cheese, outsmarting other tokens and stacking up the $CHEEZ, one slice at a time.
 
-.story-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #FFD700;
-}
+                    With every corner of the digital cheese vault he conquers, he’s leaving a trail of envy and laughter in his wake. Whether it’s flexing his latest stash or taunting his rivals, Moolah Mouse is here to show that it’s not just about holding tokens—it’s about enjoying the chase.
+                </p>
+            </div>
+        </section>
 
-.story-text {
-    font-size: 18px;
-}
+        <!-- Bottom Section with Rectangle and Rounded Corners -->
+        <section id="bottom-section">
+            <div class="rounded-rectangle">
+                <!-- Left Illustration -->
+                <img src="images/left-illustration.png" alt="Left Illustration" class="side-illustration left-illustration">
 
-/* Bottom Section */
-#bottom-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
+                <!-- Centered Contract Box with Title -->
+                <div class="contract-wrapper">
+                    <h2 class="contract-title">Contract</h2>
+                    <div class="contract-box">
+                        <!-- Copy Icon and Contract Text -->
+                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" onclick="copyToClipboard()">
+                        <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1...QPkac</p>
+                    </div>
+                    <!-- Disclaimer Text Below the Contract -->
+                    <p class="disclaimer-text">
+                        This is a meme project created purely for fun and entertainment purposes. It has no real-life use and should not be considered financial advice or an investment. Always do your own research and only participate if you're here to enjoy the fun. Catch the Cheese responsibly!
+                    </p>
+                </div>
 
-.rounded-rectangle {
-    background: #3C4162;
-    border-radius: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+                <!-- Right Illustration -->
+                <img src="images/right-illustration.png" alt="Right Illustration" class="side-illustration right-illustration">
+            </div>
+        </section>
+    </div>
 
-.side-illustration {
-    width: 100px;
-    margin: 0 15px;
-}
-
-.contract-wrapper {
-    text-align: center;
-}
-
-.contract-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #FFD700;
-}
-
-.contract-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.copy-icon {
-    width: 20px;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.sub-text {
-    font-size: 16px;
-    color: #CCCCCC;
-    cursor: pointer;
-}
-
-.disclaimer-text {
-    font-size: 12px;
-    color: #FFF;
-    margin-top: 10px;
-    line-height: 1.3;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .rounded-rectangle {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .side-illustration {
-        width: 80px;
-        margin: 15px 0;
-    }
-}
+    <!-- JavaScript to Copy Full Contract Address to Clipboard -->
+    <script>
+        function copyToClipboard() {
+            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
+            navigator.clipboard.writeText(fullContractAddress).then(() => {
+                alert('Full contract address copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
