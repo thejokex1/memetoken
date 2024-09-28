@@ -82,11 +82,12 @@ header {
     height: 50px;
     margin: 0 15px; /* Spacing between icons */
     border-radius: 15px;
-    transition: transform 0.3s; /* Animation for hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
 }
 
 .social-icon:hover {
-    transform: translateY(-5px); /* Float effect on hover */
+    transform: translateY(-8px); /* Float effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
 /* Call-to-Action Button Styling */
@@ -162,7 +163,7 @@ header {
 }
 
 .text-content .sub-text {
-    font-size: 16px; /* Reduced font size for better wrapping */
+    font-size: 12px; /* Reduced font size by 50% */
     color: #CCCCCC;
     word-break: break-all;
     cursor: pointer;
@@ -199,6 +200,6 @@ header {
     }
 
     .text-content .sub-text {
-        font-size: 14px;
+        font-size: 10px; /* Further adjustment for mobile */
     }
 }
