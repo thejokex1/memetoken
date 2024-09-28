@@ -77,17 +77,24 @@ header {
     margin: 20px 0;
 }
 
-.social-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 15px;
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* New Story Section */
+#story-section {
+    background: rgba(60, 65, 98, 0.9);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 30px 0;
 }
 
-.social-icon:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+.story-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.story-text {
+    font-size: 18px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Call-to-Action Button Styling */
@@ -129,90 +136,36 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-/* Left and Right Illustrations */
-.side-illustration {
-    width: 80px;
-    margin: 0 15px;
-}
-
-/* Outer Box */
+/* Contract Box and Disclaimer */
 .outer-box {
     background: #2B2F4C;
     border-radius: 20px;
-    padding: 5px 10px;
-    display: inline-block;
+    padding: 10px;
     margin: 0 15px;
 }
 
-/* Inner Contract Box */
+.contract-title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #FFD700;
+}
+
 .contract-box {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Copy Icon Styling */
 .copy-icon {
     width: 20px;
     margin-right: 8px;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
-.copy-icon:hover {
-    color: #FFD700;
-}
-
-/* Contract Text Styling */
 .sub-text {
     font-size: 16px;
     color: #CCCCCC;
-    cursor: pointer;
-    margin: 0;
-    transition: color 0.3s;
-}
-
-.sub-text:hover {
-    color: #FFD700;
-}
-
-/* Responsive Design for Mobile */
-@media only screen and (max-width: 768px) {
-    .cta-button {
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .rounded-rectangle {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .side-illustration {
-        width: 60px;
-        margin: 10px 0;
-    }
-
-    .outer-box {
-        padding: 8px;
-    }
-
-    .contract-box {
-        padding: 5px 10px;
-    }
-
-    .copy-icon {
-        width: 18px;
-    }
-
-    .sub-text {
-        font-size: 14px;
-    }
-}
+    cursor: poi
