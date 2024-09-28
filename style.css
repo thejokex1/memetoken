@@ -9,7 +9,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
     box-sizing: border-box;
     font-family: 'Comic Story', sans-serif;
     color: #FFF;
@@ -57,7 +57,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Separate Colors for Hero Text */
+/* Hero Text Styles */
 .white-text {
     font-size: 48px;
     color: #FFFFFF;
@@ -68,6 +68,20 @@ header {
     font-size: 48px;
     color: #FFD700;
     margin: 0;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px; /* Spacing between icons */
+    border-radius: 15px; /* Rounded corners for icons */
 }
 
 /* Call-to-Action Button Styling */
@@ -101,8 +115,8 @@ header {
 }
 
 .rounded-rectangle {
-    background: #3C4162; /* Updated background color */
-    border-radius: 20px;
+    background: #3C4162;
+    border-radius: 30px; /* Max rounded corners */
     padding: 20px;
     width: 100%;
     max-width: 1000px;
@@ -123,15 +137,15 @@ header {
 
 /* Contract Box Styling */
 .contract-box {
-    background: #2B2F4C; /* New background color for the contract box */
+    background: #2B2F4C;
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 25px; /* Max rounded corners */
     margin-top: 10px;
     display: inline-block;
 }
 
 .text-content h2 {
-    font-size: 30px; /* Reduced font size to fit one line */
+    font-size: 30px;
     margin-bottom: 10px;
     color: #FFD700;
 }
@@ -156,14 +170,14 @@ header {
         padding: 10px 20px;
     }
 
-    #bottom-section {
-        flex-wrap: nowrap; /* Ensure no stacking */
-        padding: 30px 10px;
+    .social-icon {
+        width: 40px;
+        height: 40px;
     }
 
     .rounded-rectangle {
         padding: 20px;
-        width: 90%; /* Ensure better fit on mobile */
+        width: 90%;
     }
 
     .left-illustration, .right-illustration {
