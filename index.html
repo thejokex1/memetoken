@@ -3,137 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Website</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background: url('background.jpg') no-repeat center center fixed; /* Change 'background.jpg' to your image URL */
-            background-size: cover;
-            color: #ffffff;
-        }
-
-        .header {
-            width: 100%;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .header img {
-            width: 150px; /* Adjust according to your logo */
-        }
-
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 80vh;
-        }
-
-        .hero-section h1 {
-            font-size: 48px;
-            margin: 10px 0;
-        }
-
-        .hero-section p {
-            font-size: 18px;
-            margin: 15px 0;
-            max-width: 600px;
-        }
-
-        .hero-section button {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #fff;
-            background: #007BFF;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .footer-section {
-            width: 80%;
-            margin: 50px auto;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-section .illustration-left,
-        .footer-section .illustration-right {
-            width: 120px; /* Adjust to fit your illustrations */
-            height: 120px;
-            background: #333;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .footer-section .text-section {
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .footer-section .text-section h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .footer-section .text-section p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .footer-section .text-section p.small {
-            font-size: 12px;
-            opacity: 0.8;
-        }
-    </style>
+    <title>Crypto Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Full Page Wrapper -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <img src="images/logo.png" alt="Crypto Logo" class="logo">
+        </header>
 
-    <!-- Header Section -->
-    <div class="header">
-        <img src="logo.png" alt="Crypto Logo"> <!-- Change 'logo.png' to your logo URL -->
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <img src="images/hero-illustration.png" alt="Hero Illustration" class="hero-illustration">
+                <h1>Welcome to Crypto World</h1>
+                <p>Experience the future of digital currency!</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Bottom Section with Rectangle and Rounded Corners -->
+        <section id="bottom-section">
+            <div class="rounded-rectangle">
+                <img src="images/left-illustration.png" alt="Left Illustration" class="left-illustration">
+                <div class="text-content">
+                    <h2>Join the Revolution</h2>
+                    <p class="main-text">Our platform is built for the next generation of crypto enthusiasts.</p>
+                    <p class="sub-text">Start trading and earning rewards with us today.</p>
+                </div>
+                <img src="images/right-illustration.png" alt="Right Illustration" class="right-illustration">
+            </div>
+        </section>
     </div>
-
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <h1>Welcome to Crypto World</h1>
-        <p>Discover the future of digital assets and take part in the revolution of decentralized finance. Join our community today and explore limitless possibilities.</p>
-        <button>Get Started</button>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer-section">
-        <div class="illustration-left">
-            <!-- Place your left illustration here -->
-            <img src="illustration-left.png" alt="Illustration Left"> <!-- Change to your illustration -->
-        </div>
-        <div class="text-section">
-            <h2>Join Us Today</h2>
-            <p>Be part of a thriving community and invest in the future.</p>
-            <p class="small">For more information, check out our documentation.</p>
-            <p class="small">Follow us on social media for updates.</p>
-        </div>
-        <div class="illustration-right">
-            <!-- Place your right illustration here -->
-            <img src="illustration-right.png" alt="Illustration Right"> <!-- Change to your illustration -->
-        </div>
-    </div>
-
 </body>
 </html>
