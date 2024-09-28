@@ -29,7 +29,9 @@
                 </div>
 
                 <!-- Buy Button -->
-                <a href="https://raydium.io/swap/" target="_blank" class="cta-button">Buy $CHEEZ Now!</a>
+                <a href="https://raydium.io/swap/" target="_blank" class="cta-button">
+                    <img src="images/solanaicon.png" alt="Solana Icon" class="button-icon"> Buy $CHEEZ
+                </a>
             </div>
         </section>
 
@@ -54,9 +56,9 @@
                 <!-- Centered Contract Box and Title -->
                 <div class="outer-box">
                     <h2 class="contract-title">Contract</h2>
-                    <div class="contract-box">
+                    <div class="contract-box" onmouseover="toggleHover(true)" onmouseout="toggleHover(false)">
                         <!-- Copy Icon and Contract Text -->
-                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" onclick="copyToClipboard()">
+                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" id="copy-icon" onclick="copyToClipboard()">
                         <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1...QPkac</p>
                     </div>
                     <p class="disclaimer-text">
@@ -70,13 +72,25 @@
         </section>
     </div>
 
-    <!-- JavaScript to Copy Full Contract Address to Clipboard -->
+    <!-- JavaScript to Copy Full Contract Address to Clipboard and Sync Hover Effects -->
     <script>
         function copyToClipboard() {
             const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
             navigator.clipboard.writeText(fullContractAddress).then(() => {
                 alert('Full contract address copied to clipboard!');
             });
+        }
+
+        function toggleHover(state) {
+            const contractAddress = document.getElementById('contract-address');
+            const copyIcon = document.getElementById('copy-icon');
+            if (state) {
+                contractAddress.style.color = '#FFD700';
+                copyIcon.style.color = '#FFD700';
+            } else {
+                contractAddress.style.color = '#CCCCCC';
+                copyIcon.style.color = '#FFF';
+            }
         }
     </script>
 </body>
