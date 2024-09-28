@@ -120,19 +120,34 @@ header {
     padding: 50px 20px;
 }
 
+.rounded-rectangle {
+    background: #3C4162;
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left and Right Illustrations */
+.side-illustration {
+    width: 80px;
+    margin: 0 15px;
+}
+
 /* Outer Box */
 .outer-box {
-    background: #3C4162;
-    border-radius: 25px;
-    padding: 10px;
+    background: #2B2F4C;
+    border-radius: 20px;
+    padding: 5px 10px;
     display: inline-block;
+    margin: 0 15px;
 }
 
 /* Inner Contract Box */
 .contract-box {
-    background: #2B2F4C;
-    padding: 5px 15px;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +162,7 @@ header {
 }
 
 .copy-icon:hover {
-    color: #FFD700; /* Change color on hover */
+    color: #FFD700;
 }
 
 /* Contract Text Styling */
@@ -160,7 +175,7 @@ header {
 }
 
 .sub-text:hover {
-    color: #FFD700; /* Change color on hover */
+    color: #FFD700;
 }
 
 /* Responsive Design for Mobile */
@@ -175,16 +190,22 @@ header {
         height: 40px;
     }
 
+    .rounded-rectangle {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .side-illustration {
+        width: 60px;
+        margin: 10px 0;
+    }
+
     .outer-box {
         padding: 8px;
     }
 
     .contract-box {
         padding: 5px 10px;
-    }
-
-    .left-illustration, .right-illustration {
-        width: 80px;
     }
 
     .copy-icon {
