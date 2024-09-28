@@ -35,17 +35,18 @@ header {
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduce padding for smaller screens */
 }
 
 .hero-illustration {
-    width: 250px;
+    width: 80%; /* Make the illustration size relative for responsive resizing */
+    max-width: 250px; /* Cap the size at 250px */
     margin-bottom: 20px;
 }
 
 /* Styling for Both Main and Sub Text in the Hero Section */
 h1, p {
-    font-size: 48px; /* Same size for both */
+    font-size: 36px; /* Decrease font size for better mobile view */
     color: #FFD700; /* Yellow color */
     margin: 0; /* Remove default margins */
 }
@@ -60,10 +61,10 @@ p {
     text-decoration: none; /* Remove underline from link */
     background: #FFD700; /* Background color */
     color: #333; /* Text color */
-    padding: 20px 40px; /* Adjust padding to create circular appearance */
+    padding: 15px 30px; /* Adjust padding for a better button appearance */
     border-radius: 50px; /* Higher value for fully rounded button */
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18px; /* Adjust font size for smaller screens */
     font-weight: bold;
     border: none;
     transition: 0.3s;
@@ -81,41 +82,32 @@ p {
     display: flex;
     justify-content: center;
     padding: 50px 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .rounded-rectangle {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     border-radius: 20px; /* Rounded corners */
-    padding: 30px;
-    width: 80%;
+    padding: 20px; /* Reduce padding for mobile */
+    width: 90%; /* Increase width to 90% for smaller screens */
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
     text-align: center;
+    flex-wrap: wrap; /* Enable wrapping inside the rectangle */
 }
 
 .left-illustration, .right-illustration {
-    width: 150px;
+    width: 40%; /* Reduce width for mobile view */
+    max-width: 150px;
 }
 
 .text-content {
-    width: 50%;
+    width: 100%; /* Full width for text content on mobile */
+    margin-top: 20px; /* Spacing for better readability */
 }
 
 .text-content h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #FFD700;
-}
-
-.text-content .main-text {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #FFFFFF; /* White for better contrast */
-}
-
-.text-content .sub-text {
-    font-size: 18px;
-    color: #CCCCCC; /* Lighter color for subtext */
-}
+    font-size: 28px; /* Adjust font size for mobile */
+    margin-bottom: 10p
