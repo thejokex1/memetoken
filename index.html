@@ -18,8 +18,17 @@
         <section id="hero">
             <div class="hero-content">
                 <img src="images/hero-illustration.png" alt="Hero Illustration" class="hero-illustration">
-                <h1 class="white-text">Catch the Moolah!</h1>
-                <p class="yellow-text">Stack the Cheese</p>
+                <h1 class="white-text">Catch the Moolah,</h1>
+                <p class="yellow-text">Stack the Cheese!</p>
+
+                <!-- Social Icons Section -->
+                <div class="social-icons">
+                    <img src="images/telegram-icon.png" alt="Telegram" class="social-icon">
+                    <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+                    <img src="images/discord-icon.png" alt="Discord" class="social-icon">
+                </div>
+
+                <!-- Buy Button -->
                 <a href="https://yourlinkhere.com" class="cta-button">Buy $CHEEZ</a>
             </div>
         </section>
@@ -30,7 +39,7 @@
                 <img src="images/left-illustration.png" alt="Left Illustration" class="left-illustration">
                 <div class="text-content">
                     <h2>Buy $CHEEZ Now!</h2>
-                    <p class="main-text">Contract Address:</p>
+                    <p class="main-text">Contract:</p>
                     <div class="contract-box">
                         <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac</p>
                     </div>
@@ -46,7 +55,7 @@
             const contractAddress = document.getElementById('contract-address');
             const text = contractAddress.innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert('Contract address copied to clipboard!');
+                alert('Contract copied to clipboard!');
             });
         }
     </script>
