@@ -5,24 +5,35 @@ body, html {
     font-family: 'Luckiest Guy', sans-serif;
 }
 
+/* Header Section */
+header {
+    background: transparent; /* Transparent background for the header */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed; /* Keep header fixed at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header-content .logo {
+    width: 120px;
+}
+
 /* Hero Section */
 #hero {
     height: 100vh;
-    background: url('images/background-hero.png') no-repeat center center/cover;
+    background: url('images/background-hero.png') no-repeat center center/cover; /* Use PNG background */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+    margin-top: 80px; /* Add margin to compensate for fixed header */
 }
 
 .hero-content {
     color: #FFF;
-}
-
-.logo {
-    width: 120px;
-    margin-bottom: 20px;
 }
 
 /* Illustration Above Title */
