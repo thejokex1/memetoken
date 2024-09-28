@@ -14,7 +14,7 @@ body, html {
     font-family: 'Comic Story', sans-serif;
     color: #FFF;
     background: url('images/background.png') no-repeat center center fixed;
-    background-attachment: fixed; /* Smooth background scrolling */
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -80,14 +80,14 @@ header {
 .social-icon {
     width: 50px;
     height: 50px;
-    margin: 0 15px; /* Spacing between icons */
+    margin: 0 15px;
     border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .social-icon:hover {
-    transform: translateY(-8px); /* Float effect on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Call-to-Action Button Styling */
@@ -122,7 +122,7 @@ header {
 
 .rounded-rectangle {
     background: #3C4162;
-    border-radius: 30px; /* Max rounded corners */
+    border-radius: 30px;
     padding: 20px;
     width: 100%;
     max-width: 1000px;
@@ -133,7 +133,7 @@ header {
 }
 
 .left-illustration, .right-illustration {
-    width: 120px; /* Ensure illustrations stay on the sides */
+    width: 120px;
 }
 
 .text-content {
@@ -141,11 +141,10 @@ header {
     text-align: center;
 }
 
-/* Contract Box Styling */
 .contract-box {
     background: #2B2F4C;
     padding: 10px 20px;
-    border-radius: 25px; /* Max rounded corners */
+    border-radius: 25px;
     margin-top: 10px;
     display: inline-block;
 }
@@ -163,7 +162,7 @@ header {
 }
 
 .text-content .sub-text {
-    font-size: 12px; /* Reduced font size by 50% */
+    font-size: 16px;
     color: #CCCCCC;
     word-break: break-all;
     cursor: pointer;
@@ -200,6 +199,6 @@ header {
     }
 
     .text-content .sub-text {
-        font-size: 10px; /* Further adjustment for mobile */
+        font-size: 10px;
     }
 }
