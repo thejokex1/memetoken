@@ -117,9 +117,12 @@ p {
     max-width: 120px; /* Max size for mobile */
 }
 
+/* Text Content Styling */
 .text-content {
     width: 100%; /* Full width for text content on mobile */
     margin-top: 20px; /* Spacing for better readability */
+    word-wrap: break-word; /* Break long words */
+    word-break: break-all; /* Break long words even at character level */
 }
 
 .text-content h2 {
@@ -134,7 +137,10 @@ p {
     color: #FFFFFF; /* White for better contrast */
 }
 
+/* Contract Address Handling */
 .text-content .sub-text {
     font-size: 16px;
     color: #CCCCCC; /* Lighter color for subtext */
+    word-break: break-all; /* Ensure long strings like contract addresses wrap */
+    overflow-wrap: break-word; /* Break long words and wrap */
 }
