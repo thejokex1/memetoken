@@ -54,20 +54,26 @@ p {
     margin-top: 10px; /* Add some spacing between h1 and p */
 }
 
+/* Call-to-Action Button Styling */
 .cta-button {
-    background: #FFD700;
-    color: #333;
-    border: none;
-    padding: 15px 30px;
+    display: inline-block; /* Allows setting width and height */
+    text-decoration: none; /* Remove underline from link */
+    background: #FFD700; /* Background color */
+    color: #333; /* Text color */
+    padding: 20px 40px; /* Adjust padding to create circular appearance */
+    border-radius: 50px; /* Higher value for fully rounded button */
     cursor: pointer;
     font-size: 24px;
-    border-radius: 10px;
+    font-weight: bold;
+    border: none;
     transition: 0.3s;
-    margin-top: 20px; /* Add some spacing above the button */
+    margin-top: 20px; /* Add spacing above the button */
 }
 
 .cta-button:hover {
-    background: #FFA500;
+    background: #FFA500; /* Change color on hover */
+    color: #FFF; /* Text color on hover */
+    transform: translateY(-2px); /* Slight movement effect */
 }
 
 /* Bottom Section */
