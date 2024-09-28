@@ -115,64 +115,52 @@ header {
 /* Bottom Section */
 #bottom-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 50px 20px;
 }
 
-.rounded-rectangle {
+/* Outer Box */
+.outer-box {
     background: #3C4162;
-    border-radius: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    display: inline-block;
 }
 
-.left-illustration, .right-illustration {
-    width: 120px;
-}
-
-.text-content {
-    width: 60%;
-    text-align: center;
-}
-
-/* Contract Box Styling */
+/* Inner Contract Box */
 .contract-box {
     background: #2B2F4C;
-    padding: 10px 20px;
-    border-radius: 25px;
-    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 20px;
     display: flex;
-    align-items: center; /* Center the text and icon */
+    align-items: center;
+    justify-content: center;
 }
 
+/* Copy Icon Styling */
 .copy-icon {
-    width: 25px;
-    margin-right: 10px; /* Spacing between icon and text */
+    width: 20px;
+    margin-right: 8px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-.text-content h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #FFD700;
+.copy-icon:hover {
+    color: #FFD700; /* Change color on hover */
 }
 
-.text-content .main-text {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #FFFFFF;
-}
-
-.text-content .sub-text {
+/* Contract Text Styling */
+.sub-text {
     font-size: 16px;
     color: #CCCCCC;
     cursor: pointer;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.sub-text:hover {
+    color: #FFD700; /* Change color on hover */
 }
 
 /* Responsive Design for Mobile */
@@ -187,25 +175,23 @@ header {
         height: 40px;
     }
 
-    .rounded-rectangle {
-        padding: 20px;
-        width: 90%;
+    .outer-box {
+        padding: 8px;
+    }
+
+    .contract-box {
+        padding: 5px 10px;
     }
 
     .left-illustration, .right-illustration {
         width: 80px;
     }
 
-    .text-content {
-        width: 100%;
-        text-align: center;
-    }
-
     .copy-icon {
-        width: 20px;
+        width: 18px;
     }
 
-    .text-content .sub-text {
+    .sub-text {
         font-size: 14px;
     }
 }
