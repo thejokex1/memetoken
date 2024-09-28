@@ -26,24 +26,27 @@ body, html {
     padding: 20px;
 }
 
-/* Custom Glowing Cursor */
+/* Custom Flashlight Cursor */
 #glow-cursor {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.7) 0%, rgba(255, 140, 0, 0.5) 70%, rgba(255, 140, 0, 0.2) 100%);
-    box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.4);  /* Glowing effect */
+    background: radial-gradient(circle, rgba(255, 255, 100, 0.8) 0%, rgba(255, 255, 100, 0.3) 50%, rgba(255, 255, 0, 0) 80%);
+    box-shadow: 0 0 20px 8px rgba(255, 255, 100, 0.4);  /* Smoother glow effect */
     z-index: 10000;  /* Stay on top */
-    transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease;
+    transition: width 0.4s ease, height 0.4s ease, transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;  /* Smooth transitions */
 }
 
-#glow-cursor:hover {
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 0 20px 15px rgba(255, 215, 0, 0.6);
+/* Hover Effects on Interactive Elements */
+a:hover ~ #glow-cursor,
+button:hover ~ #glow-cursor {
+    width: 60px;  /* Increase glow size */
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 255, 150, 1) 0%, rgba(255, 255, 100, 0.6) 50%, rgba(255, 255, 0, 0.2) 100%);
+    box-shadow: 0 0 25px 15px rgba(255, 255, 150, 0.6);  /* Stronger glow effect */
 }
 
 /* Header Section */
@@ -97,12 +100,11 @@ header {
     height: 50px;
     margin: 0 15px;
     border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
 }
 
 /* Buy Button */
@@ -113,11 +115,11 @@ header {
     background: #FFD700;
     color: #333;
     padding: 15px 30px;
-    border-radius: 50px;  /* Smooth rounded corners */
+    border-radius: 50px;
     cursor: pointer;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Comic Story', sans-serif;  /* Use Comic Story */
+    font-family: 'Comic Story', sans-serif;
     border: none;
     transition: 0.3s;
     margin-top: 20px;
@@ -133,7 +135,6 @@ header {
     background: #FFA500;
     color: #FFF;
     transform: translateY(-4px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Story Section */
@@ -169,7 +170,7 @@ header {
     background: #3C4162;
     border-radius: 30px;
     padding: 20px;
-    width: 60%;  /* Reduced width for overlap effect */
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,26 +181,25 @@ header {
 
 /* Left and Right Illustrations */
 .side-illustration {
-    width: 150px;  /* Increase size */
+    width: 150px;
     position: absolute;
-    top: 50%;  /* Center vertically */
-    transform: translateY(-50%);  /* Correct vertical position */
-    transition: transform 0.3s, box-shadow 0.3s;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
 }
 
 .left-illustration {
-    left: -80px;  /* Move left illustration outside */
-    z-index: 2;  /* Above the box */
+    left: -80px;
+    z-index: 2;
 }
 
 .right-illustration {
-    right: -80px;  /* Move right illustration outside */
-    z-index: 2;  /* Above the box */
+    right: -80px;
+    z-index: 2;
 }
 
 .side-illustration:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.4);
+    transform: translateY(-20px);  /* Float upwards */
 }
 
 /* Centered Contract Box */
@@ -254,12 +254,12 @@ header {
     .rounded-rectangle {
         flex-direction: column;
         text-align: center;
-        width: 80%;  /* Increase box width for mobile */
+        width: 80%;
         padding: 30px;
     }
 
     .side-illustration {
-        width: 100px;  /* Reduce illustration size on mobile */
+        width: 100px;
         top: auto;
         transform: none;
         position: static;
