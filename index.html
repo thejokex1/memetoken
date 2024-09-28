@@ -41,7 +41,7 @@
                     <h2>Buy $CHEEZ Now!</h2>
                     <p class="main-text">Contract:</p>
                     <div class="contract-box">
-                        <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac</p>
+                        <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xm...kac</p>
                     </div>
                 </div>
                 <img src="images/right-illustration.png" alt="Right Illustration" class="right-illustration">
@@ -49,13 +49,12 @@
         </section>
     </div>
 
-    <!-- JavaScript to Copy to Clipboard -->
+    <!-- JavaScript to Copy Full Contract Address to Clipboard -->
     <script>
         function copyToClipboard() {
-            const contractAddress = document.getElementById('contract-address');
-            const text = contractAddress.innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Contract copied to clipboard!');
+            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
+            navigator.clipboard.writeText(fullContractAddress).then(() => {
+                alert('Full contract address copied to clipboard!');
             });
         }
     </script>
