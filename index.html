@@ -6,27 +6,14 @@
     <title>Moolah Mouse | $CHEEZ</title>
     <meta name="title" content="Moolah Mouse | $CHEEZ">
     <meta name="description" content="Catch the Moolah, Stack the Cheez!">
-
+    <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com/">
-    <meta property="og:title" content="Moolah Mouse | $CHEEZ">
-    <meta property="og:description" content="Catch the Moolah, Stack the Cheez!">
-    <meta property="og:image" content="images/seoimage.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourwebsite.com/">
-    <meta property="twitter:title" content="Moolah Mouse | $CHEEZ">
-    <meta property="twitter:description" content="Catch the Moolah, Stack the Cheez!">
-    <meta property="twitter:image" content="images/seoimage.png">
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Custom Glowing Cursor -->
+    <div id="glow-cursor"></div>
+
     <!-- Full Page Wrapper -->
     <div class="wrapper">
         <!-- Header Section -->
@@ -55,30 +42,18 @@
             </div>
         </section>
 
-        <!-- Story Section -->
-        <section id="story-section">
-            <div class="story-content">
-                <h2 class="story-title">The Story of Moolah Mouse</h2>
-                <p class="story-text">
-                    In a chaotic world of meme tokens, there’s one character that stands out from the crowd, a mouse with a nose for money and a taste for cheddar. Meet Moolah Mouse, the wittiest and cheekiest chaser of "moolah" in the meme-verse. This mischievous mouse is always on the hunt for his next big cheese, outsmarting other tokens and stacking up the $CHEEZ, one slice at a time.
-
-                    With every corner of the digital cheese vault he conquers, he’s leaving a trail of envy and laughter in his wake. Whether it’s flexing his latest stash or taunting his rivals, Moolah Mouse is here to show that it’s not just about holding tokens—it’s about enjoying the chase.
-                </p>
-            </div>
-        </section>
-
         <!-- Bottom Section with Rectangle and Rounded Corners -->
         <section id="bottom-section">
             <div class="rounded-rectangle">
                 <!-- Left Illustration -->
                 <img src="images/left-illustration.png" alt="Left Illustration" class="side-illustration left-illustration">
 
-                <!-- Centered Contract Box with Title -->
+                <!-- Centered Contract Box and Title -->
                 <div class="contract-wrapper">
                     <h2 class="contract-title">Contract</h2>
                     <div class="contract-box">
                         <!-- Copy Icon and Contract Text -->
-                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" onclick="copyToClipboard()">
+                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" id="copy-icon" onclick="copyToClipboard()">
                         <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1...QPkac</p>
                     </div>
                     <!-- Disclaimer Text Below the Contract -->
@@ -93,14 +68,15 @@
         </section>
     </div>
 
-    <!-- JavaScript to Copy Full Contract Address to Clipboard -->
+    <!-- JavaScript for Glowing Cursor -->
     <script>
-        function copyToClipboard() {
-            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
-            navigator.clipboard.writeText(fullContractAddress).then(() => {
-                alert('Full contract address copied to clipboard!');
-            });
-        }
+        // JavaScript to create the glowing cursor effect
+        const cursor = document.getElementById('glow-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
     </script>
 </body>
 </html>
