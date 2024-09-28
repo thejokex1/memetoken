@@ -10,7 +10,7 @@ body, html {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    box-sizing: border-box; /* Include padding and border in width calculations */
+    box-sizing: border-box;
     font-family: 'Comic Story', sans-serif; /* Use Comic Story font */
     color: #FFF;
     background: url('images/background.png') no-repeat center center fixed; /* Background image for the entire site */
@@ -56,91 +56,119 @@ header {
     margin-bottom: 20px;
 }
 
-/* Styling for Both Main and Sub Text in the Hero Section */
-h1, p {
-    font-size: 6vw; /* Responsive font size */
-    color: #FFD700; /* Yellow color */
+/* Separate Colors for Hero Text */
+.white-text {
+    font-size: 48px;
+    color: #FFFFFF;
     margin: 0;
 }
 
-p {
-    margin-top: 10px; /* Add some spacing between h1 and p */
+.yellow-text {
+    font-size: 48px;
+    color: #FFD700;
+    margin: 0;
 }
 
 /* Call-to-Action Button Styling */
 .cta-button {
-    display: inline-block; /* Allows setting width and height */
-    text-decoration: none; /* Remove underline from link */
-    background: #FFD700; /* Background color */
-    color: #333; /* Text color */
-    padding: 15px 30px; /* Adjust padding for better button appearance */
-    border-radius: 50px; /* Higher value for fully rounded button */
+    display: inline-block;
+    text-decoration: none;
+    background: #FFD700;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 4vw; /* Adjust font size for mobile screens */
+    font-size: 24px;
     font-weight: bold;
     border: none;
     transition: 0.3s;
-    margin-top: 20px; /* Add spacing above the button */
+    margin-top: 20px;
 }
 
 .cta-button:hover {
-    background: #FFA500; /* Change color on hover */
-    color: #FFF; /* Text color on hover */
-    transform: translateY(-2px); /* Slight movement effect */
+    background: #FFA500;
+    color: #FFF;
+    transform: translateY(-2px);
 }
 
 /* Bottom Section */
 #bottom-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 50px 20px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    width: 100%; /* Ensure no horizontal scrolling */
 }
 
 .rounded-rectangle {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Reduce padding for mobile */
-    width: 100%; /* Full width on small screens */
-    max-width: 600px; /* Constrain maximum width */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
     text-align: center;
-    flex-wrap: wrap; /* Enable wrapping inside the rectangle */
 }
 
 .left-illustration, .right-illustration {
-    width: 30vw; /* Use responsive units */
-    max-width: 120px; /* Max size for mobile */
+    width: 120px; /* Fixed width for images */
 }
 
-/* Text Content Styling */
 .text-content {
-    width: 100%; /* Full width for text content on mobile */
-    margin-top: 20px; /* Spacing for better readability */
-    word-wrap: break-word; /* Break long words */
-    word-break: break-all; /* Break long words even at character level */
+    width: 50%;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .text-content h2 {
-    font-size: 24px; /* Adjust font size for mobile */
+    font-size: 36px;
     margin-bottom: 10px;
     color: #FFD700;
 }
 
 .text-content .main-text {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
-    color: #FFFFFF; /* White for better contrast */
+    color: #FFFFFF;
 }
 
-/* Contract Address Handling */
 .text-content .sub-text {
-    font-size: 16px;
-    color: #CCCCCC; /* Lighter color for subtext */
-    word-break: break-all; /* Ensure long strings like contract addresses wrap */
-    overflow-wrap: break-word; /* Break long words and wrap */
+    font-size: 18px;
+    color: #CCCCCC;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media only screen and (max-width: 768px) {
+    .white-text, .yellow-text {
+        font-size: 32px;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    #bottom-section {
+        flex-wrap: wrap;
+        padding: 30px 10px;
+    }
+
+    .rounded-rectangle {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-illustration, .right-illustration {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
 }
