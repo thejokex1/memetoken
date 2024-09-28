@@ -11,9 +11,10 @@ body, html {
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box;
-    font-family: 'Comic Story', sans-serif; /* Use Comic Story font */
+    font-family: 'Comic Story', sans-serif;
     color: #FFF;
-    background: url('images/background.png') no-repeat center center fixed; /* Background image for the entire site */
+    background: url('images/background.png') no-repeat center center fixed;
+    background-attachment: fixed; /* Smooth background scrolling */
     background-size: cover;
 }
 
@@ -37,7 +38,7 @@ header {
 }
 
 .logo {
-    width: 120px;
+    width: 180px; /* Increased logo size by 50% */
 }
 
 /* Hero Section */
@@ -47,12 +48,12 @@ header {
 }
 
 .hero-content {
-    max-width: 100%; /* Ensure hero content fits within viewport */
+    max-width: 100%;
 }
 
 .hero-illustration {
-    width: 60vw; /* Use viewport width for scaling */
-    max-width: 250px; /* Cap the size */
+    width: 60vw;
+    max-width: 250px;
     margin-bottom: 20px;
 }
 
@@ -100,7 +101,7 @@ header {
 }
 
 .rounded-rectangle {
-    background: rgba(255, 255, 255, 0.1);
+    background: #3C4162; /* Updated background color */
     border-radius: 20px;
     padding: 20px;
     width: 100%;
@@ -112,23 +113,31 @@ header {
 }
 
 .left-illustration, .right-illustration {
-    width: 120px; /* Fixed width for images */
+    width: 120px; /* Ensure illustrations stay on the sides */
 }
 
 .text-content {
-    width: 50%;
-    word-wrap: break-word;
-    word-break: break-all;
+    width: 60%;
+    text-align: center;
+}
+
+/* Contract Box Styling */
+.contract-box {
+    background: #2B2F4C; /* New background color for the contract box */
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .text-content h2 {
-    font-size: 36px;
+    font-size: 30px; /* Reduced font size to fit one line */
     margin-bottom: 10px;
     color: #FFD700;
 }
 
 .text-content .main-text {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #FFFFFF;
 }
@@ -142,33 +151,31 @@ header {
 
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
-    .white-text, .yellow-text {
-        font-size: 32px;
-    }
-
     .cta-button {
         font-size: 18px;
         padding: 10px 20px;
     }
 
     #bottom-section {
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Ensure no stacking */
         padding: 30px 10px;
     }
 
     .rounded-rectangle {
-        flex-direction: column;
         padding: 20px;
+        width: 90%; /* Ensure better fit on mobile */
     }
 
     .left-illustration, .right-illustration {
         width: 80px;
-        margin-bottom: 20px;
     }
 
     .text-content {
         width: 100%;
         text-align: center;
-        margin-top: 0;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
     }
 }
