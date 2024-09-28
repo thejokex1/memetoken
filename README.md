@@ -1,2 +1,0 @@
-# moolahmouse
-Meme token
