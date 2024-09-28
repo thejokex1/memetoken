@@ -77,29 +77,23 @@ header {
     margin: 20px 0;
 }
 
-/* New Story Section */
-#story-section {
-    background: rgba(60, 65, 98, 0.9);
-    padding: 50px 20px;
-    text-align: center;
-    margin: 30px 0;
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.story-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #FFD700;
+.social-icon:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.story-text {
-    font-size: 18px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Call-to-Action Button Styling */
+/* Buy Button with Icon */
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     background: #FFD700;
     color: #333;
@@ -113,59 +107,14 @@ header {
     margin-top: 20px;
 }
 
+.button-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
 .cta-button:hover {
     background: #FFA500;
     color: #FFF;
     transform: translateY(-2px);
 }
-
-/* Bottom Section */
-#bottom-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.rounded-rectangle {
-    background: #3C4162;
-    border-radius: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Contract Box and Disclaimer */
-.outer-box {
-    background: #2B2F4C;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 0 15px;
-}
-
-.contract-title {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #FFD700;
-}
-
-.contract-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.copy-icon {
-    width: 20px;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.sub-text {
-    font-size: 16px;
-    color: #CCCCCC;
-    cursor: poi
