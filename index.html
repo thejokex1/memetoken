@@ -6,21 +6,6 @@
     <title>Moolah Mouse | $CHEEZ</title>
     <meta name="title" content="Moolah Mouse | $CHEEZ">
     <meta name="description" content="Catch the Moolah, Stack the Cheez!">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com/">
-    <meta property="og:title" content="Moolah Mouse | $CHEEZ">
-    <meta property="og:description" content="Catch the Moolah, Stack the Cheez!">
-    <meta property="og:image" content="images/hero-illustration.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourwebsite.com/">
-    <meta property="twitter:title" content="Moolah Mouse | $CHEEZ">
-    <meta property="twitter:description" content="Catch the Moolah, Stack the Cheez!">
-    <meta property="twitter:image" content="images/hero-illustration.png">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,14 +55,15 @@
                 <!-- Left Illustration -->
                 <img src="images/left-illustration.png" alt="Left Illustration" class="side-illustration left-illustration">
 
-                <!-- Centered Contract Box and Title -->
-                <div class="outer-box">
+                <!-- Centered Contract Box with Title -->
+                <div class="contract-wrapper">
                     <h2 class="contract-title">Contract</h2>
-                    <div class="contract-box" onmouseover="toggleHover(true)" onmouseout="toggleHover(false)">
+                    <div class="contract-box">
                         <!-- Copy Icon and Contract Text -->
-                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" id="copy-icon" onclick="copyToClipboard()">
+                        <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" onclick="copyToClipboard()">
                         <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1...QPkac</p>
                     </div>
+                    <!-- Disclaimer Text Below the Contract -->
                     <p class="disclaimer-text">
                         This is a meme project created purely for fun and entertainment purposes. It has no real-life use and should not be considered financial advice or an investment. Always do your own research and only participate if you're here to enjoy the fun. Catch the Cheese responsibly!
                     </p>
@@ -89,25 +75,13 @@
         </section>
     </div>
 
-    <!-- JavaScript to Copy Full Contract Address to Clipboard and Sync Hover Effects -->
+    <!-- JavaScript to Copy Full Contract Address to Clipboard -->
     <script>
         function copyToClipboard() {
             const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
             navigator.clipboard.writeText(fullContractAddress).then(() => {
                 alert('Full contract address copied to clipboard!');
             });
-        }
-
-        function toggleHover(state) {
-            const contractAddress = document.getElementById('contract-address');
-            const copyIcon = document.getElementById('copy-icon');
-            if (state) {
-                contractAddress.style.color = '#FFD700';
-                copyIcon.style.color = '#FFD700';
-            } else {
-                contractAddress.style.color = '#CCCCCC';
-                copyIcon.style.color = '#FFF';
-            }
         }
     </script>
 </body>
