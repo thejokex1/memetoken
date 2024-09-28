@@ -3,61 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moolah Mouse - $CHEEZ Token</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Add Google Fonts (Optional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Crypto Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed; /* Change 'background.jpg' to your image URL */
+            background-size: cover;
+            color: #ffffff;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header img {
+            width: 150px; /* Adjust according to your logo */
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            margin: 15px 0;
+            max-width: 600px;
+        }
+
+        .hero-section button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background: #007BFF;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .footer-section {
+            width: 80%;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-section .illustration-left,
+        .footer-section .illustration-right {
+            width: 120px; /* Adjust to fit your illustrations */
+            height: 120px;
+            background: #333;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-section .text-section {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .footer-section .text-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section .text-section p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .footer-section .text-section p.small {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <!-- Logo -->
-            <img src="images/logo.png" alt="Moolah Mouse Logo" class="logo">
-        </div>
-    </header>
+    <div class="header">
+        <img src="logo.png" alt="Crypto Logo"> <!-- Change 'logo.png' to your logo URL -->
+    </div>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <!-- Illustration Above Title -->
-            <img src="images/hero-illustration.png" alt="Mouse Illustration" class="hero-illustration">
-            
-            <!-- Catchphrase Text -->
-            <h1>Catch the Moolah, Stack the Cheez!</h1>
-            
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="images/telegram-icon.png" alt="Telegram"></a>
-                <a href="#"><img src="images/discord-icon.png" alt="Discord"></a>
-            </div>
-            
-            <!-- Call-to-Action Button -->
-            <button class="cta-button">Buy $CHEEZ</button>
-        </div>
-    </section>
+    <div class="hero-section">
+        <h1>Welcome to Crypto World</h1>
+        <p>Discover the future of digital assets and take part in the revolution of decentralized finance. Join our community today and explore limitless possibilities.</p>
+        <button>Get Started</button>
+    </div>
 
-    <!-- Buy Section with Background Rectangle -->
-    <section id="buy-section">
-        <div class="buy-background">
-            <div class="buy-content">
-                <!-- Mouse Image -->
-                <img src="images/mouse-character.png" alt="Moolah Mouse Character" class="mouse-image">
-                
-                <!-- Buy Text -->
-                <div class="buy-text">
-                    <h2>Buy $CHEEZ Now</h2>
-                    <p class="contract-address">Contract: 0x123456789ABCDEF123456789ABCDEF1234567890</p>
-                    <img src="images/cheese-icon.png" alt="Cheese Icon" class="cheese-icon">
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Footer Section -->
-    <footer>
-        <p>Moolah Mouse ($CHEEZ) is a meme project created purely for fun and entertainment purposes.</p>
-    </footer>
+    <div class="footer-section">
+        <div class="illustration-left">
+            <!-- Place your left illustration here -->
+            <img src="illustration-left.png" alt="Illustration Left"> <!-- Change to your illustration -->
+        </div>
+        <div class="text-section">
+            <h2>Join Us Today</h2>
+            <p>Be part of a thriving community and invest in the future.</p>
+            <p class="small">For more information, check out our documentation.</p>
+            <p class="small">Follow us on social media for updates.</p>
+        </div>
+        <div class="illustration-right">
+            <!-- Place your right illustration here -->
+            <img src="illustration-right.png" alt="Illustration Right"> <!-- Change to your illustration -->
+        </div>
+    </div>
+
 </body>
 </html>
