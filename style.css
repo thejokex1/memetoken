@@ -92,11 +92,11 @@ header {
     background: #FFD700;
     color: #333;
     padding: 15px 30px;
-    border-radius: 50px;  /* Smooth rounded corners */
+    border-radius: 50px;
     cursor: pointer;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Comic Story', sans-serif;  /* Use Comic Story */
+    font-family: 'Comic Story', sans-serif;
     border: none;
     transition: 0.3s;
     margin-top: 20px;
@@ -111,8 +111,8 @@ header {
 .cta-button:hover {
     background: #FFA500;
     color: #FFF;
-    transform: translateY(-4px);  /* Lift effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);  /* Shadow effect */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Story Section */
@@ -148,24 +148,37 @@ header {
     background: #3C4162;
     border-radius: 30px;
     padding: 20px;
-    width: 100%;
-    max-width: 1000px;
+    width: 60%;  /* Reduced width for overlap effect */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 /* Left and Right Illustrations */
 .side-illustration {
-    width: 100px;
-    margin: 0 15px;
+    width: 150px;  /* Increase size */
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    transform: translateY(-50%);  /* Correct vertical position */
+}
+
+.left-illustration {
+    left: -80px;  /* Move left illustration outside */
+    z-index: 2;  /* Above the box */
+}
+
+.right-illustration {
+    right: -80px;  /* Move right illustration outside */
+    z-index: 2;  /* Above the box */
 }
 
 /* Centered Contract Box */
 .contract-wrapper {
     text-align: center;
-    width: 60%;
+    padding: 10px;
 }
 
 .contract-title {
@@ -209,20 +222,34 @@ header {
     line-height: 1.3;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .rounded-rectangle {
         flex-direction: column;
         text-align: center;
+        width: 80%;  /* Increase box width for mobile */
+        padding: 30px;
     }
 
     .side-illustration {
-        width: 80px;
+        width: 100px;  /* Reduce illustration size on mobile */
+        top: auto;
+        transform: none;
+        position: static;
         margin: 15px 0;
+    }
+
+    .left-illustration {
+        left: auto;
+    }
+
+    .right-illustration {
+        right: auto;
     }
 
     .contract-wrapper {
         width: 100%;
+        padding: 0 15px;
     }
 
     .contract-box {
