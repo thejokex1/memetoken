@@ -3,57 +3,47 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Luckiest Guy', sans-serif;
+    color: #FFF;
+    background: url('images/background.jpg') no-repeat center center fixed; /* Background image for the entire site */
+    background-size: cover;
+}
+
+/* Wrapper to Center Content */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header Section */
 header {
-    background: transparent; /* Transparent background for the header */
-    padding: 20px 0;
     text-align: center;
-    position: fixed; /* Keep header fixed at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Stick to the top */
-    z-index: 1000; /* Ensure it stays above other content */
+    padding: 20px 0;
 }
 
-.header-content .logo {
+.logo {
     width: 120px;
 }
 
 /* Hero Section */
 #hero {
-    height: 100vh;
-    background: url('images/background-hero.png') no-repeat center center/cover; /* Use PNG background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    position: relative;
-    margin-top: 80px; /* Add margin to compensate for fixed header */
+    padding: 100px 20px;
 }
 
-.hero-content {
-    color: #FFF;
-}
-
-/* Illustration Above Title */
 .hero-illustration {
-    width: 250px; /* Adjust the size to fit the design */
-    margin-bottom: 20px; /* Add spacing between illustration and title */
+    width: 250px;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 48px;
-    color: #FFD700; /* Yellow color */
+    color: #FFD700;
 }
 
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a img {
-    width: 40px;
-    margin: 0 10px;
+p {
+    font-size: 18px;
 }
 
 .cta-button {
@@ -71,52 +61,44 @@ h1 {
     background: #FFA500;
 }
 
-/* Buy Section */
-#buy-section {
-    background: #333;
+/* Bottom Section */
+#bottom-section {
+    display: flex;
+    justify-content: center;
     padding: 50px 20px;
+}
+
+.rounded-rectangle {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
     text-align: center;
 }
 
-/* Background Rectangle for Buy Section */
-.buy-background {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Add a border to make it pop */
-    border-radius: 20px; /* Rounded corners */
-    padding: 30px;
-    display: inline-block;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+.left-illustration, .right-illustration {
+    width: 150px;
 }
 
-.buy-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.text-content {
+    width: 50%;
 }
 
-.mouse-image {
-    width: 200px;
-    margin-right: 20px;
-}
-
-.buy-text h2 {
+.text-content h2 {
     font-size: 36px;
+    margin-bottom: 10px;
     color: #FFD700;
 }
 
-.contract-address {
+.text-content .main-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content .sub-text {
     font-size: 18px;
-}
-
-.cheese-icon {
-    width: 50px;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: #ddd;
-    padding: 20px;
-    text-align: center;
 }
