@@ -8,10 +8,18 @@
 body, html {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding and border in width calculations */
     font-family: 'Comic Story', sans-serif; /* Use Comic Story font */
     color: #FFF;
     background: url('images/background.png') no-repeat center center fixed; /* Background image for the entire site */
     background-size: cover;
+}
+
+/* Apply box-sizing to all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 /* Wrapper to Center Content */
@@ -35,20 +43,24 @@ header {
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 50px 20px; /* Reduce padding for smaller screens */
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 100%; /* Ensure hero content fits within viewport */
 }
 
 .hero-illustration {
-    width: 80%; /* Make the illustration size relative for responsive resizing */
-    max-width: 250px; /* Cap the size at 250px */
+    width: 60vw; /* Use viewport width for scaling */
+    max-width: 250px; /* Cap the size */
     margin-bottom: 20px;
 }
 
 /* Styling for Both Main and Sub Text in the Hero Section */
 h1, p {
-    font-size: 36px; /* Decrease font size for better mobile view */
+    font-size: 6vw; /* Responsive font size */
     color: #FFD700; /* Yellow color */
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 p {
@@ -61,10 +73,10 @@ p {
     text-decoration: none; /* Remove underline from link */
     background: #FFD700; /* Background color */
     color: #333; /* Text color */
-    padding: 15px 30px; /* Adjust padding for a better button appearance */
+    padding: 15px 30px; /* Adjust padding for better button appearance */
     border-radius: 50px; /* Higher value for fully rounded button */
     cursor: pointer;
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 4vw; /* Adjust font size for mobile screens */
     font-weight: bold;
     border: none;
     transition: 0.3s;
@@ -83,13 +95,15 @@ p {
     justify-content: center;
     padding: 50px 20px;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 100%; /* Ensure no horizontal scrolling */
 }
 
 .rounded-rectangle {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Reduce padding for mobile */
-    width: 90%; /* Increase width to 90% for smaller screens */
+    width: 100%; /* Full width on small screens */
+    max-width: 600px; /* Constrain maximum width */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,8 +113,8 @@ p {
 }
 
 .left-illustration, .right-illustration {
-    width: 40%; /* Reduce width for mobile view */
-    max-width: 150px;
+    width: 30vw; /* Use responsive units */
+    max-width: 120px; /* Max size for mobile */
 }
 
 .text-content {
@@ -109,5 +123,18 @@ p {
 }
 
 .text-content h2 {
-    font-size: 28px; /* Adjust font size for mobile */
-    margin-bottom: 10p
+    font-size: 24px; /* Adjust font size for mobile */
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.text-content .main-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* White for better contrast */
+}
+
+.text-content .sub-text {
+    font-size: 16px;
+    color: #CCCCCC; /* Lighter color for subtext */
+}
