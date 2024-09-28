@@ -42,6 +42,16 @@
             </div>
         </section>
 
+        <!-- Story Section -->
+        <section id="story-section">
+            <div class="story-content">
+                <h2 class="story-title">The Story of Moolah Mouse</h2>
+                <p class="story-text">
+                    Moolah Mouse is the ultimate cheddar-chasing master! With a nose for big gains and a knack for outsmarting others, he’s always stacking the $CHEEZ and laughing his way through the meme-verse. No vault is safe from his cheesy charm. Ready to chase the cheddar with Moolah?
+                </p>
+            </div>
+        </section>
+
         <!-- Bottom Section with Rectangle and Rounded Corners -->
         <section id="bottom-section">
             <div class="rounded-rectangle">
@@ -77,6 +87,14 @@
             cursor.style.left = e.pageX + 'px';
             cursor.style.top = e.pageY + 'px';
         });
+
+        // JavaScript for Copy to Clipboard Functionality
+        function copyToClipboard() {
+            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
+            navigator.clipboard.writeText(fullContractAddress).then(() => {
+                alert('Full contract address copied to clipboard!');
+            });
+        }
     </script>
 </body>
 </html>
