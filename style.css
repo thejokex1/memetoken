@@ -167,48 +167,39 @@ header {
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
+    flex-wrap: wrap;  /* Enable wrapping */
 }
 
 .rounded-rectangle {
     background: #3C4162;
     border-radius: 30px;
     padding: 20px;
-    width: 60%;
+    width: 90%;  /* Increased width for better layout */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
     z-index: 1;
-}
-
-/* Left and Right Illustrations */
-.side-illustration {
-    width: 150px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
+    flex-wrap: wrap;  /* Enable wrapping within the box */
 }
 
 .left-illustration {
-    left: -80px;
-    z-index: 2;
+    width: 150px;
+    margin: 10px;
 }
 
 .right-illustration {
-    right: -80px;
-    z-index: 2;
-}
-
-.side-illustration:hover {
-    transform: translateY(-3px);  /* Minimal upward float effect */
+    width: 150px;
+    margin: 10px;
 }
 
 /* Centered Contract Box */
 .contract-wrapper {
     text-align: center;
     padding: 10px;
+    margin: 0 20px;  /* Center the contract box */
+    flex-grow: 1;  /* Allow the contract to expand */
 }
 
 .contract-title {
@@ -220,10 +211,11 @@ header {
 .contract-box {
     background: #2B2F4C;
     border-radius: 25px;
-    padding: 15px 30px;
+    padding: 10px 20px;  /* Adjust padding for smaller size */
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .copy-icon {
@@ -261,25 +253,15 @@ header {
         padding: 30px;
     }
 
-    .side-illustration {
+    .left-illustration, .right-illustration {
         width: 100px;
-        top: auto;
-        transform: none;
-        position: static;
         margin: 15px 0;
-    }
-
-    .left-illustration {
-        left: auto;
-    }
-
-    .right-illustration {
-        right: auto;
     }
 
     .contract-wrapper {
         width: 100%;
         padding: 0 15px;
+        margin-bottom: 20px;  /* Add margin to separate sections */
     }
 
     .contract-box {
