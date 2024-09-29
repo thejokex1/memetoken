@@ -27,14 +27,14 @@ body, html {
 
 /* Custom Flashlight Cursor */
 #glow-cursor {
-    width: 35px;
-    height: 35px;
+    width: 17.5px;  /* 50% of original size */
+    height: 17.5px;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
     transform: translate(-50%, -50%);
     background: rgba(255, 215, 0, 1);  /* Solid yellow background */
-    box-shadow: 0 0 15px 15px rgba(255, 215, 0, 0.8);  /* Smoother glow effect */
+    box-shadow: 0 0 10px 10px rgba(255, 215, 0, 0.7);  /* Adjusted glow effect */
     z-index: 10000;  /* Stay on top */
     transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions */
 }
@@ -46,10 +46,10 @@ a, button {
 
 a:hover ~ #glow-cursor,
 button:hover ~ #glow-cursor {
-    width: 50px;  /* Increase glow size on hover */
-    height: 50px;
+    width: 25px;  /* Smaller increase in size */
+    height: 25px;
     background: rgba(255, 215, 0, 0.9);  /* Slightly transparent for smoothness */
-    box-shadow: 0 0 20px 20px rgba(255, 215, 0, 0.7);  /* Stronger glow effect */
+    box-shadow: 0 0 15px 15px rgba(255, 215, 0, 0.5);  /* Softer glow effect */
 }
 
 /* Header Section */
