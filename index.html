@@ -71,16 +71,13 @@
                         This is a meme project created purely for fun and entertainment purposes. It has no real-life use and should not be considered financial advice or an investment. Always do your own research and only participate if you're here to enjoy the fun. Catch the Cheese responsibly!
                     </p>
                 </div>
-
-                <!-- Right Illustration -->
-                <img src="images/right-illustration.png" alt="Right Illustration" class="side-illustration right-illustration">
             </div>
         </section>
     </div>
 
-    <!-- JavaScript for Glowing Cursor -->
+    <!-- JavaScript for Glowing Cursor and Copy Functionality -->
     <script>
-        // JavaScript to create the glowing cursor effect
+        // Custom glowing cursor effect
         const cursor = document.getElementById('glow-cursor');
 
         document.addEventListener('mousemove', (e) => {
@@ -88,9 +85,9 @@
             cursor.style.top = e.pageY + 'px';
         });
 
-        // JavaScript for Copy to Clipboard Functionality
+        // Copy to clipboard functionality
         function copyToClipboard() {
-            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac'; // Full contract address
+            const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac';
             navigator.clipboard.writeText(fullContractAddress).then(() => {
                 alert('Full contract address copied to clipboard!');
             });
