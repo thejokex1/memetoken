@@ -104,7 +104,7 @@ header {
 }
 
 .social-icon:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);  /* Minimal hover effect for icons */
 }
 
 /* Buy Button */
@@ -199,7 +199,7 @@ header {
 }
 
 .side-illustration:hover {
-    transform: translateY(-20px);  /* Float upwards */
+    transform: translateY(-5px);  /* Float upwards slightly */
 }
 
 /* Centered Contract Box */
