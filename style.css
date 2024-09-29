@@ -16,7 +16,36 @@ body, html {
     background: url('images/background.png') no-repeat center center fixed;
     background-attachment: fixed;
     background-size: cover;
-    cursor: auto;  /* Remove old custom cursor */
+    cursor: none;  /* Hide the default cursor */
+}
+
+/* Flashlight Cursor */
+#glow-cursor {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 215, 0, 0.4);  /* Slight yellow color */
+    box-shadow: 0 0 15px 15px rgba(255, 215, 0, 0.6);  /* Soft glow */
+    z-index: 10000;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+a, button, .copy-icon, .sub-text {
+    cursor: none;
+}
+
+a:hover ~ #glow-cursor,
+button:hover ~ #glow-cursor,
+.copy-icon:hover ~ #glow-cursor,
+.sub-text:hover ~ #glow-cursor {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 20px 20px rgba(255, 215, 0, 0.8);
 }
 
 /* Highlight Text Color */
@@ -89,6 +118,18 @@ header {
     transform: translateY(-5px);
 }
 
+/* Fixes to Story Paragraph */
+.story-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-text {
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
 /* Buy Button */
 .cta-button {
     display: inline-flex;
@@ -116,46 +157,4 @@ header {
     background: #FFA500;
     color: #FFF;
     transform: translateY(-4px);
-}
-
-/* Bottom Section */
-#bottom-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.rounded-rectangle {
-    background: #3C4162;
-    border-radius: 30px;
-    padding: 20px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.left-illustration {
-    width: 150px;
-    margin: 10px;
-}
-
-.contract-wrapper {
-    text-align: center;
-    padding: 10px;
-    margin: 0 20px;
-}
-
-.contract-box {
-    background: #2B2F4C;
-    border-radius: 25px;
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
 }
