@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
+    <!-- Custom Flashlight Cursor -->
+    <div id="glow-cursor"></div>
+
     <!-- Full Page Wrapper -->
     <div class="wrapper">
         <!-- Header Section -->
@@ -72,8 +75,16 @@
         </section>
     </div>
 
-    <!-- JavaScript for Copy Functionality -->
+    <!-- JavaScript for Flashlight Cursor and Copy Functionality -->
     <script>
+        // Custom glowing cursor effect
+        const cursor = document.getElementById('glow-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+
         // Copy to clipboard functionality
         function copyToClipboard() {
             const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac';
