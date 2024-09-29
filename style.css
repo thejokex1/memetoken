@@ -19,11 +19,10 @@ body, html {
     cursor: none;  /* Hide the default cursor */
 }
 
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* Highlight Text Color */
+::selection {
+    background: #FFD700;  /* Yellow background for highlighted text */
+    color: #333;  /* Darker text color on highlight */
 }
 
 /* Custom Flashlight Cursor */
@@ -34,19 +33,23 @@ body, html {
     position: absolute;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(255, 255, 100, 0.8) 0%, rgba(255, 255, 100, 0.3) 50%, rgba(255, 255, 0, 0) 80%);
-    box-shadow: 0 0 20px 8px rgba(255, 255, 100, 0.4);  /* Smoother glow effect */
+    background: rgba(255, 215, 0, 1);  /* Solid yellow background */
+    box-shadow: 0 0 15px 15px rgba(255, 215, 0, 0.8);  /* Smoother glow effect */
     z-index: 10000;  /* Stay on top */
-    transition: width 0.4s ease, height 0.4s ease, transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;  /* Smooth transitions */
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions */
 }
 
 /* Hover Effects on Interactive Elements */
+a, button {
+    cursor: none;  /* Maintain same cursor style */
+}
+
 a:hover ~ #glow-cursor,
 button:hover ~ #glow-cursor {
-    width: 60px;  /* Increase glow size */
-    height: 60px;
-    background: radial-gradient(circle, rgba(255, 255, 150, 1) 0%, rgba(255, 255, 100, 0.6) 50%, rgba(255, 255, 0, 0.2) 100%);
-    box-shadow: 0 0 25px 15px rgba(255, 255, 150, 0.6);  /* Stronger glow effect */
+    width: 50px;  /* Increase glow size on hover */
+    height: 50px;
+    background: rgba(255, 215, 0, 0.9);  /* Slightly transparent for smoothness */
+    box-shadow: 0 0 20px 20px rgba(255, 215, 0, 0.7);  /* Stronger glow effect */
 }
 
 /* Header Section */
@@ -116,7 +119,7 @@ header {
     color: #333;
     padding: 15px 30px;
     border-radius: 50px;
-    cursor: pointer;
+    cursor: none;  /* Maintain custom cursor */
     font-size: 24px;
     font-weight: bold;
     font-family: 'Comic Story', sans-serif;
