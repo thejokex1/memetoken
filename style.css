@@ -16,12 +16,19 @@ body, html {
     background: url('images/background.png') no-repeat center center fixed;
     background-attachment: fixed;
     background-size: cover;
-    cursor: url('images/cursor.gif'), auto;  /* Use custom cursor GIF */
+    cursor: auto;  /* Remove old custom cursor */
 }
 
-/* Custom Cursor for Interactive Elements */
-a, button, .copy-icon, .sub-text {
-    cursor: url('images/cursor.gif'), auto;  /* Apply the GIF cursor */
+/* Highlight Text Color */
+::selection {
+    background: #FFD700;
+    color: #333;
+}
+
+/* Center Wrapper */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Header Section */
