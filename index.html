@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* Remove pointer cursor */
+        .copy-icon, a, button, .sub-text {
+            cursor: default;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <!-- Custom Flashlight Cursor -->
@@ -66,14 +81,17 @@
                         <img src="images/Copyicon.png" alt="Copy Icon" class="copy-icon" id="copy-icon" onclick="copyToClipboard()">
                         <p class="sub-text" id="contract-address" onclick="copyToClipboard()">4xmb1...QPkac</p>
                     </div>
-                    <!-- Disclaimer Text Below the Contract -->
-                    <p class="disclaimer-text">
-                        This is a meme project created purely for fun and entertainment purposes. It has no real-life use and should not be considered financial advice or an investment. Always do your own research and only participate if you're here to enjoy the fun. Catch the Cheese responsibly!
-                    </p>
                 </div>
             </div>
         </section>
     </div>
+
+    <!-- Footer Section with Disclaimer Text -->
+    <footer>
+        <p>
+            This is a meme project created purely for fun and entertainment purposes. It has no real-life use and should not be considered financial advice or an investment. Always do your own research and only participate if you're here to enjoy the fun. Catch the Cheese responsibly!
+        </p>
+    </footer>
 
     <!-- JavaScript for Flashlight Cursor and Copy Functionality -->
     <script>
