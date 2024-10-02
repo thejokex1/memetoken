@@ -85,11 +85,20 @@
             cursor.style.top = e.pageY + 'px';
         });
 
-        // Copy to clipboard functionality
+        // Copy to clipboard functionality with custom message
         function copyToClipboard() {
+            const contractAddressElement = document.getElementById('contract-address');
             const fullContractAddress = '4xmb1YBugazzgeNr9xiHvHYYgusQqxY6HkJRQLqVPkac';
+
+            // Copy the full address to the clipboard
             navigator.clipboard.writeText(fullContractAddress).then(() => {
-                alert('Full contract address copied to clipboard!');
+                // Show "Address Copied" message
+                contractAddressElement.textContent = 'Address Copied!';
+                
+                // Revert to original text after 3 seconds
+                setTimeout(() => {
+                    contractAddressElement.textContent = '4xmb1...QPkac';
+                }, 3000);
             });
         }
     </script>
